@@ -1,0 +1,3 @@
+rootProject.name = 'java_tips'
+
+include 'T01_DependencyTest'

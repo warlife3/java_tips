@@ -1,0 +1,62 @@
+import com.ronzhin.Versions
+
+plugins {
+    //support Idea IDE
+    id 'idea'
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    // Build uber-jar
+    id 'com.github.johnrengelman.shadow' version '5.2.0' apply false
+}
+
+idea {
+    project {
+        languageLevel = 11
+    }
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+allprojects {
+    group 'com.ronzhin'
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: com.ronzhin.plugins.MyPlugin
+
+    dependencyManagement {
+        dependencies {
+            imports {
+                mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
+            }
+            dependency("com.google.guava:guava:${Versions.guava}")
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            failOnVersionConflict()
+        }
+
+        resolutionStrategy {
+        }
+    }
+}
+
+task hello0 {
+    println 'Hello world!'
+    println System.getenv('JAVA_HOME')
+}
+
+task hello2 {
+    doLast {
+        BuildMessage.showMessage()
+    }
+}
+
+task hello3(type: com.ronzhin.plugins.HelloTask)
+

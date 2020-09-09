@@ -4,4 +4,5 @@
 I will store some java technologies that I want to have quick access to with the generated structure and examples.*
 
 ### Tips:
-01. T01_DependencyTest - Example of base gradle structure <br>
+01. T01_DependencyTest - Base gradle structure <br>
+02. T02_CustomUnsafeArray - Custom array realized with unsafe class <br>

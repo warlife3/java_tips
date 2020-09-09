@@ -1,8 +1,8 @@
 package com.ronzhin.unsafe.array;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
@@ -13,13 +13,13 @@ public class IntArrayTest {
 
     private IntArray myArr;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         int arraySizeInit = 10;
         myArr = new IntArray(arraySizeInit);
     }
 
-    @After
+    @AfterEach
     public void clean() {
         myArr.close();
     }

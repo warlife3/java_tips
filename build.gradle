@@ -1,4 +1,5 @@
 import com.ronzhin.Versions
+import com.ronzhin.plugins.HelloTask
 
 plugins {
     //support Idea IDE
@@ -58,5 +59,5 @@ task hello2 {
     }
 }
 
-task hello3(type: com.ronzhin.plugins.HelloTask)
+task hello3(type: HelloTask)
 

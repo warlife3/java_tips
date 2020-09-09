@@ -1,3 +1,4 @@
 rootProject.name = 'java_tips'
 
-include 'T01_DependencyTest'
+include 'T01_Dependency'
+include 'T02_CustomUnsafeArray'

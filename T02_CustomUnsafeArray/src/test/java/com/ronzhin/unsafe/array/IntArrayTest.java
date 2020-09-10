@@ -2,6 +2,7 @@ package com.ronzhin.unsafe.array;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.stream.IntStream;
@@ -9,6 +10,7 @@ import java.util.stream.LongStream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("Class should")
 public class IntArrayTest {
 
     private IntArray myArr;
@@ -25,11 +27,12 @@ public class IntArrayTest {
     }
 
     @Test
+    @DisplayName(" store current added values")
     public void storeCurrentValues() {
         int arraySizeMax = 20;
 
         for (int i = 0; i < arraySizeMax; i++) {
-            myArr.addValue(i);
+            myArr.add(i);
         }
 
         int[] array = IntStream.range(0, arraySizeMax).toArray();
@@ -49,7 +52,7 @@ public class IntArrayTest {
         int expectedResult = arraySizeMax;
 
         for (int i = 0; i < arraySizeMax; i++) {
-            myArr.addValue(i);
+            myArr.add(i);
         }
 
         int result = myArr.getSize();
@@ -63,7 +66,7 @@ public class IntArrayTest {
         long result = 0;
 
         for (int i = 0; i < arraySizeMax; i++) {
-            myArr.addValue(i);
+            myArr.add(i);
         }
 
         for (int i = 0; i < myArr.getSize(); i++) {

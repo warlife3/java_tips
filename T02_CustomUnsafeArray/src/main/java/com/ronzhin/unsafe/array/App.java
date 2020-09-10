@@ -11,7 +11,7 @@ public class App {
 
         try (IntArray myArr = new IntArray(arraySizeInit)) {
             for (int i = 0; i < arraySizeMax; i++) {
-                myArr.addValue(i);
+                myArr.add(i);
             }
 
             for (int i = 0; i < myArr.getSize(); i++) {

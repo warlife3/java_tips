@@ -26,7 +26,7 @@ public class IntArray implements Closeable {
         allocate(capacity);
     }
 
-    public void addValue(int value) {
+    public void add(int value) {
         if (size >= capacity) {
             capacity <<= 1;
             reallocate(capacity);

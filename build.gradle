@@ -1,5 +1,6 @@
 import com.ronzhin.Versions
 import com.ronzhin.plugins.HelloTask
+import com.ronzhin.plugins.MyPlugin
 
 plugins {
     //support Idea IDE
@@ -27,7 +28,7 @@ allprojects {
     }
 
     apply plugin: "io.spring.dependency-management"
-    apply plugin: com.ronzhin.plugins.MyPlugin
+    apply plugin: MyPlugin
 
     dependencyManagement {
         dependencies {
@@ -35,6 +36,8 @@ allprojects {
                 mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
             }
             dependency("com.google.guava:guava:${Versions.guava}")
+            dependency("org.openjdk.jmh:jmh-core:${Versions.jmh}")
+            dependency("org.openjdk.jmh:jmh-generator-annprocess:${Versions.jmh}")
         }
     }
 
@@ -60,4 +63,13 @@ task hello2 {
 }
 
 task hello3(type: HelloTask)
+
+//print versions from BOM
+task managedVersions {
+    doLast {
+        dependencyManagement.managedVersions.each {
+            println it
+        }
+    }
+}
 

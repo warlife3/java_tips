@@ -6,3 +6,4 @@ I will store some java technologies that I want to have quick access to with the
 ### Tips:
 01. T01_DependencyTest - Base gradle structure <br>
 02. T02_CustomUnsafeArray - Custom array realized with unsafe class. Speed measured with JMH <br>
+03. T03_Annotations - Created annotations like in JUnit <br>

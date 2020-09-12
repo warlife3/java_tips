@@ -2,3 +2,5 @@ rootProject.name = 'java_tips'
 
 include 'T01_Dependency'
 include 'T02_CustomUnsafeArray'
+include 'T03_Annotations'
+

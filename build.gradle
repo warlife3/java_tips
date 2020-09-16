@@ -1,6 +1,7 @@
-import com.ronzhin.Versions
-import com.ronzhin.plugins.HelloTask
-import com.ronzhin.plugins.MyPlugin
+import com.ronzhin.tips.base.BuildMessage
+import com.ronzhin.tips.base.Versions
+import com.ronzhin.tips.base.plugins.HelloTask
+import com.ronzhin.tips.base.plugins.MyPlugin
 
 plugins {
     //support Idea IDE

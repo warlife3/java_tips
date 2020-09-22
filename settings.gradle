@@ -4,4 +4,4 @@ include 'T01_Dependency'
 include 'T02_CustomUnsafeArray'
 include 'T03_Annotations'
 include 'T04_GC'
-
+include 'T05_ObjectSizeRemoteDebug'

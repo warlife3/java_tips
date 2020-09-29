@@ -1,13 +1,15 @@
 package com.ronzhin.tips.annotations.core;
 
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TestItem {
 
-    private Map<TestStage, List<Method>> stageMap;
-
     private final ReflectedObject reflectedObject;
+    private Map<TestStage, List<Method>> stageMap;
 
     public TestItem(ReflectedObject object) {
         this.reflectedObject = object;
@@ -22,7 +24,10 @@ public class TestItem {
     }
 
     public void addMethod(TestStage testStage, Method method) {
-        this.stageMap.computeIfPresent(testStage, (key, value) -> {value.add(method); return value; });
+        this.stageMap.computeIfPresent(testStage, (key, value) -> {
+            value.add(method);
+            return value;
+        });
     }
 
     public List<Method> getStageMethods(TestStage testStage) {

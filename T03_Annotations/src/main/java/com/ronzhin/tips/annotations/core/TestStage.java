@@ -1,8 +1,8 @@
 package com.ronzhin.tips.annotations.core;
 
-import com.ronzhin.tips.annotations.annotation.Test;
 import com.ronzhin.tips.annotations.annotation.After;
 import com.ronzhin.tips.annotations.annotation.Before;
+import com.ronzhin.tips.annotations.annotation.Test;
 
 import java.lang.annotation.Annotation;
 

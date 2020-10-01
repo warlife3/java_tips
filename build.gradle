@@ -36,11 +36,24 @@ allprojects {
             imports {
                 mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
             }
+            // T01
             dependency("com.google.guava:guava:${Versions.guava}")
+
+            // T02
             dependency("org.openjdk.jmh:jmh-core:${Versions.jmh}")
             dependency("org.openjdk.jmh:jmh-generator-annprocess:${Versions.jmh}")
+
+            // T05
             dependency("org.openjdk.jol:jol-core:${Versions.jol}")
+
+            // T06
             dependency("org.ow2.asm:asm-commons:${Versions.asm}")
+
+            // T08
+            dependency("org.glassfish:javax.json:${Versions.glassfishJson}")
+            dependency("com.google.protobuf:protobuf-java-util:${Versions.protobuf}")
+            dependency("javax.xml.bind:jaxb-api:${Versions.jaxbApi}")
+            dependency"org.projectlombok:lombok:${Versions.lombok}"
 
         }
     }

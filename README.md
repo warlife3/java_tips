@@ -10,3 +10,5 @@ I will store some java technologies that I want to have quick access to with gen
 04. T04_GC - Tips for Working with GC  <br>
 05. T05_ObjectSizeRemoteDebug - Module describe how to use 64/32 pointers, object alignments, calculate object size <br>
 06. T06_ByteCodes - Modify byte Class on loading. <br>
+07. T07_Patterns - Patterns examples. <br>
+08. T08_Serialization - Examples of Core java, Gson, Jackson, xjson, protobuf and custom json serializations <br>

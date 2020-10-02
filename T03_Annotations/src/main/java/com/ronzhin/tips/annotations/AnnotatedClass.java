@@ -6,27 +6,29 @@ import com.ronzhin.tips.annotations.annotation.Test;
 
 public class AnnotatedClass {
 
-    @Before
+    @Before(desc = "We will make basic initialization before each test")
     public void setUp() {
         System.out.println("SetUp is done");
     }
 
-    @Test(name = "Super test number 01")
+    @Test(desc = "Super test number 01")
     public void test01() {
+        if (true)
+            throw new RuntimeException("Test failed here");
         System.out.println("test01 is done");
     }
 
-    @Test(name = "Super test number 02")
+    @Test(desc = "Super test number 02")
     public void test02() {
         System.out.println("test02 is done");
     }
 
-    @Test(name = "Super test number 03")
+    @Test(desc = "Super test number 03")
     public void test03() {
         System.out.println("test03 is done");
     }
 
-    @After
+    @After(desc = "We will clean all data after test")
     public void clean() {
         System.out.println("clean is done");
     }

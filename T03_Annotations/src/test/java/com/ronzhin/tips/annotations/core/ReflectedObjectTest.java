@@ -1,5 +1,6 @@
 package com.ronzhin.tips.annotations.core;
 
+import com.ronzhin.tips.annotations.munit.reflection.ReflectedObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -43,25 +44,6 @@ public class ReflectedObjectTest {
         Method[] methods = reflectedObject.getMethods();
         List<String> methodNames = Arrays.stream(methods).map(Method::getName).sorted().collect(Collectors.toList());
         assertThat(methodNames).containsExactlyElementsOf(expectedMethodNames);
-    }
-
-    @Test
-    public void readRightAnnotations() {
-        Map<String, List<String>> expectedResult = new HashMap<>();
-        expectedResult.put("test01", List.of(com.ronzhin.tips.annotations.annotation.Test.class.getCanonicalName()));
-        expectedResult.put("test02", List.of(com.ronzhin.tips.annotations.annotation.Test.class.getCanonicalName()));
-        expectedResult.put("test03", List.of(com.ronzhin.tips.annotations.annotation.Test.class.getCanonicalName()));
-        expectedResult.put("setUp", List.of(com.ronzhin.tips.annotations.annotation.Before.class.getCanonicalName()));
-        expectedResult.put("clean", List.of(com.ronzhin.tips.annotations.annotation.After.class.getCanonicalName()));
-
-        Map<String, List<String>> result = new HashMap<>();
-        for (Method method : reflectedObject.getMethods()) {
-            List<String> annotationNames = reflectedObject.getAnnotations(method).stream()
-                    .map(annotation -> annotation.annotationType().getName())
-                    .collect(Collectors.toList());
-            result.put(method.getName(), annotationNames);
-        }
-        assertThat(result).containsExactlyInAnyOrderEntriesOf(expectedResult);
     }
 
 }

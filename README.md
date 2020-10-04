@@ -12,3 +12,4 @@ I will store some java technologies that I want to have quick access to with gen
 06. T06_ByteCodes - Modify byte Class on loading. <br>
 07. T07_Patterns - Patterns examples. <br>
 08. T08_Serialization - Examples of Core java, Gson, Jackson, xjson, protobuf and custom json serializations <br>
+09. T09_JDBC - Custom DbExecutor, SessionManager and simple CRUD SQL generator based on Class

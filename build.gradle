@@ -36,6 +36,9 @@ allprojects {
             imports {
                 mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
             }
+
+            dependency"org.projectlombok:lombok:${Versions.lombok}"
+
             // T01
             dependency("com.google.guava:guava:${Versions.guava}")
 
@@ -53,7 +56,13 @@ allprojects {
             dependency("org.glassfish:javax.json:${Versions.glassfishJson}")
             dependency("com.google.protobuf:protobuf-java-util:${Versions.protobuf}")
             dependency("javax.xml.bind:jaxb-api:${Versions.jaxbApi}")
-            dependency"org.projectlombok:lombok:${Versions.lombok}"
+
+            // T12
+            dependency("org.eclipse.jetty:jetty-server:${Versions.jetty}")
+            dependency("org.eclipse.jetty:jetty-webapp:${Versions.jetty}")
+            dependency("org.eclipse.jetty:jetty-security:${Versions.jetty}")
+            dependency("org.freemarker:freemarker:${Versions.freemarker}")
+            dependency("com.google.code.gson:gson:${Versions.gson}")
 
         }
     }

@@ -14,3 +14,5 @@ I will store some java technologies that I want to have quick access to with gen
 08. T08_Serialization - Examples of Core java, Gson, Jackson, xjson, protobuf and custom json serializations <br>
 09. T09_JDBC - Custom DbExecutor, SessionManager and simple CRUD SQL generator based on Class
 10. T10_Hibernate - T09_JDBC in hibernate way
+10. T11_Cache - Custom cache based on a map with soft references
+10. T12_WebServer - Simple web server on Jetty

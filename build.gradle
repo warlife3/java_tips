@@ -64,6 +64,9 @@ allprojects {
             dependency("org.freemarker:freemarker:${Versions.freemarker}")
             dependency("com.google.code.gson:gson:${Versions.gson}")
 
+            // T13
+            dependency("org.reflections:reflections:${Versions.reflections}")
+
         }
     }
 
@@ -73,6 +76,7 @@ allprojects {
         }
 
         resolutionStrategy {
+            force("org.javassist:javassist:3.24.0-GA")
         }
     }
 }
